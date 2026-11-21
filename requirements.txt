@@ -1,0 +1,28 @@
+# AMML Ranking Competition 2026 — зависимости ноутбука solution_stacked_v3.ipynb
+# Проверено на Python 3.13 (Windows 11). Подойдёт и Python 3.10+.
+
+# --- данные и классический ML ---
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+catboost>=1.2.5
+
+# --- русская морфология и нечёткое сравнение строк ---
+pymorphy3>=2.0
+pymorphy3-dicts-ru>=2.4
+rapidfuzz>=3.5
+
+# --- нейросетевые кросс-энкодеры ---
+torch>=2.2
+transformers>=4.48      # ModernBERT (ru-reranker-modernbert-small) требует >= 4.48
+tokenizers>=0.21
+huggingface_hub>=0.24
+onnxruntime>=1.17       # CPU-инференс ONNX-версий jina / mmarco-mMiniLM
+sentencepiece>=0.2      # токенизаторы XLM-R моделей
+einops>=0.7             # нужен для jina-reranker-v2 (trust_remote_code)
+
+# --- запуск самого ноутбука ---
+jupyter>=1.0
+ipykernel>=6.29
+ipywidgets>=8.1         # прогресс-бары загрузки моделей Hugging Face
